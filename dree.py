@@ -1,16 +1,13 @@
-import pathlib
-from functools import reduce
 import json
 import os
 import pathlib
 import timeit
+from functools import reduce
 
-import pandas as pd
 import tqdm
-
 from dotenv import load_dotenv
 
-from dtypes import FSItem, EnumFSItemType, FileExtAccumulator, PreGenTreeHolder
+from dtypes import EnumFSItemType, FileExtAccumulator, FSItem, PreGenTreeHolder
 from utils import obtener_descripcion, parse_size
 
 
