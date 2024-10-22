@@ -91,7 +91,7 @@ def _recursive_item_listing(items: list[str], parent: pathlib.Path, parent_stats
                             pre_calc_dirs: PreGenTreeHolder, stats_generator: StatsGenerator) -> list[FSItem]:
     children: list[FSItem] = []
 
-    for item in tqdm.tqdm(items):
+    for item in tqdm.tqdm(items, disable=True):
         item_path = parent.joinpath(item)
         item_stats = stats_generator.generate_stats(item_path)
 
